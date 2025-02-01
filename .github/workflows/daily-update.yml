@@ -1,0 +1,35 @@
+name: Daily Puzzle Update
+
+on:
+  schedule:
+    - cron: "0 8 * * *" 
+
+jobs:
+  update-puzzle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Get today's puzzle input
+        run: bash ./scripts/get-todays-puzzle.sh
+
+      - name: Commit changes if available
+        run: |
+          # Check for any changes after running the script
+          if [ -n "$(git status --porcelain)" ]; then
+            DATE=$(date -u +'%Y-%m-%d')
+            git add .
+            git commit -m "Update today's puzzle for ${DATE} [skip ci]"
+            git push origin HEAD
+          else
+            echo "No changes detected. Nothing to commit."
+          fi

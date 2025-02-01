@@ -1,0 +1,10 @@
+[package]
+name = "letrboxd-analysis"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+letters = { path = "../letters" }
+word-list = { path = "../word-list" }
+rayon = "1.10.0"
+itertools = "0.14.0"

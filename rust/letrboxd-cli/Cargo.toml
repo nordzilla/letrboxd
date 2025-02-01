@@ -1,0 +1,14 @@
+[package]
+name = "letrboxd-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "letrboxd"
+path = "src/main.rs"
+
+[dependencies]
+letters = { path = "../letters" }
+word-list = { path = "../word-list" }
+num_cpus = "1.16.0"
+crossbeam = "0.8.4"

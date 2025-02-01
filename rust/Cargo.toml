@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = [
+  "letrboxd-analysis",
+  "letrboxd-benchmarks",
+  "letrboxd-cli",
+  "letrboxd-wasm",
+  "letters",
+  "todays-puzzle",
+  "word-list",
+]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

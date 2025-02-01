@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Border square with rounded corners -->
+  <rect x="4" y="4" width="120" height="120" rx="20" fill="#2F2F2F" stroke="#D8D8D8" stroke-width="8"/>
+  <!-- Centered Letter L -->
+  <text x="64" y="72" fill="#D8D8D8" font-family="Arial, sans-serif" font-size="72pt" font-weight="bold" text-anchor="middle" dominant-baseline="middle">
+    L
+  </text>
+</svg>

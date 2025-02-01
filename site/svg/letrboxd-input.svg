@@ -1,0 +1,46 @@
+<svg id="letrboxd-svg" viewBox="0 0 600 600" width="600" height="600" xmlns="http://www.w3.org/2000/svg" aria-label="LetrBoxd Input">
+  <!-- Draw the square with 20% padding -->
+  <rect id="square"   x="120"  y="120"  width="360" height="360" rx="20" ry="20" stroke="black" stroke-width="12" fill="none" aria-hidden="true"/>
+
+  <!-- A centered text element to display the puzzle's date, if applicable -->
+  <text id="dateText" x="300"  y="300"  class="date-text" aria-hidden="true"/>
+
+  <circle id="circle0"  class="growable" cx="180" cy="120" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle1"  class="growable" cx="300" cy="120" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle2"  class="growable" cx="420" cy="120" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle3"  class="growable" cx="480" cy="180" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle4"  class="growable" cx="480" cy="300" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle5"  class="growable" cx="480" cy="420" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle6"  class="growable" cx="180" cy="480" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle7"  class="growable" cx="300" cy="480" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle8"  class="growable" cx="420" cy="480" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle9"  class="growable" cx="120" cy="180" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle10" class="growable" cx="120" cy="300" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <circle id="circle11" class="growable" cx="120" cy="420" r="12" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+
+  <rect id="rect0"  class="growable" x="150" y="50"  width="60" height="45" rx="20" ry="25" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect1"  class="growable" x="270" y="50"  width="60" height="45" rx="20" ry="25" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect2"  class="growable" x="390" y="50"  width="60" height="45" rx="20" ry="25" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect3"  class="growable" x="505" y="150" width="45" height="60" rx="25" ry="20" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect4"  class="growable" x="505" y="270" width="45" height="60" rx="25" ry="20" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect5"  class="growable" x="505" y="390" width="45" height="60" rx="25" ry="20" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect6"  class="growable" x="150" y="505" width="60" height="45" rx="20" ry="25" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect7"  class="growable" x="270" y="505" width="60" height="45" rx="20" ry="25" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect8"  class="growable" x="390" y="505" width="60" height="45" rx="20" ry="25" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect9"  class="growable" x="50"  y="150" width="45" height="60" rx="25" ry="20" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect10" class="growable" x="50"  y="270" width="45" height="60" rx="25" ry="20" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+  <rect id="rect11" class="growable" x="50"  y="390" width="45" height="60" rx="25" ry="20" fill="#f0f0f0" stroke="black" aria-hidden="true" stroke-width="4"/>
+
+  <text id="input0"  class="letrboxd-text-input growable" x="180"    y="75"  text-anchor="middle" dominant-baseline="middle" aria-label="top-side left value"      tabindex="0"></text>
+  <text id="input1"  class="letrboxd-text-input growable" x="300"    y="75"  text-anchor="middle" dominant-baseline="middle" aria-label="top-side center value"    aria-hidden="true"></text>
+  <text id="input2"  class="letrboxd-text-input growable" x="420"    y="75"  text-anchor="middle" dominant-baseline="middle" aria-label="top-side right value"     aria-hidden="true"></text>
+  <text id="input3"  class="letrboxd-text-input growable" x="527.25" y="182" text-anchor="middle" dominant-baseline="middle" aria-label="right-side upper value"   aria-hidden="true"></text>
+  <text id="input4"  class="letrboxd-text-input growable" x="527.25" y="302" text-anchor="middle" dominant-baseline="middle" aria-label="right-side middle value"  aria-hidden="true"></text>
+  <text id="input5"  class="letrboxd-text-input growable" x="527.25" y="422" text-anchor="middle" dominant-baseline="middle" aria-label="right-side bottom value"  aria-hidden="true"></text>
+  <text id="input6"  class="letrboxd-text-input growable" x="180"    y="530" text-anchor="middle" dominant-baseline="middle" aria-label="bottom-side left value"   aria-hidden="true"></text>
+  <text id="input7"  class="letrboxd-text-input growable" x="300"    y="530" text-anchor="middle" dominant-baseline="middle" aria-label="bottom-side center value" aria-hidden="true"></text>
+  <text id="input8"  class="letrboxd-text-input growable" x="420"    y="530" text-anchor="middle" dominant-baseline="middle" aria-label="bottom-side right value"  aria-hidden="true"></text>
+  <text id="input9"  class="letrboxd-text-input growable" x="72.25"  y="182" text-anchor="middle" dominant-baseline="middle" aria-label="left-side top value"      aria-hidden="true"></text>
+  <text id="input10" class="letrboxd-text-input growable" x="72.25"  y="302" text-anchor="middle" dominant-baseline="middle" aria-label="left-side middle value"   aria-hidden="true"></text>
+  <text id="input11" class="letrboxd-text-input growable" x="72.25"  y="422" text-anchor="middle" dominant-baseline="middle" aria-label="left-side bottom value"   aria-hidden="true"></text>
+</svg>

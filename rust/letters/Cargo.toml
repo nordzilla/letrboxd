@@ -1,0 +1,13 @@
+[package]
+name = "letters"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["cli"]
+cli = []  # CLI-specific features
+wasm = ["wasm-bindgen"]  # WASM-specific features
+
+[dependencies]
+serde = { version = "1.0.210", features = ["derive"] }
+wasm-bindgen = { version = "0.2.95", optional = true }

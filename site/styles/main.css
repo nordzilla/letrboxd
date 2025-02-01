@@ -1,0 +1,121 @@
+@import url("variables.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+html,
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--font-family-ui);
+  overflow: hidden;
+}
+
+@media screen and (max-aspect-ratio: 7/8) {
+  html,
+  body {
+    flex-direction: column;
+  }
+}
+
+h1, h2, h3 {
+  margin-block: var(--spacing-s);
+  font-weight: bold;
+  color: var(--color-text-dark);
+}
+
+.card {
+  display: grid;
+  visibility: hidden;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.75rem;
+  line-height: 1.25;
+  background-color: var(--color-bg-card-light);
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-s);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-dark);
+  width: 66%;
+  text-align: left;
+
+  & .card-label {
+    align-self: start;
+    font-weight: bold;
+  }
+
+  &:focus {
+    outline: var(--outline-width) solid var(--color-outline-light);
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+.left-panel {
+  display: grid;
+  flex: 2;
+  justify-items: center;
+  align-content: start;
+  background-color: var(--color-bg-panel-light);
+  padding: var(--spacing-m);
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  & > h1 {
+    color: var(--color-text-dark);
+  }
+
+  & p {
+    color: var(--color-text-dark);
+    text-align: left;
+  }
+}
+
+.right-panel {
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: var(--spacing-m);
+  background-color: var(--color-bg-panel-dark);
+  color: var(--color-text-light);
+
+  & > h1 {
+    color: var(--color-text-light);
+  }
+
+  & p {
+    line-height: 1.4;
+  }
+
+  &:focus-visible {
+    outline: var(--outline-width) solid var(--color-outline-light);
+    box-shadow: inset 0 0 4px 1px var(--color-outline-light);
+    border-bottom-left-radius: var(--border-radius-s);
+    border-bottom-right-radius: var(--border-radius-s);
+  }
+
+  & .card {
+    width: auto;
+    background-color: var(--color-bg-card-dark);
+    border: var(--border-width) solid var(--color-border-dark);
+    margin-block: var(--spacing-xs);
+
+    & .card-label {
+      color: var(--color-text-light);
+    }
+
+    & p {
+      color: var(--color-text-light);
+    }
+
+    &:focus-visible {
+      outline: var(--outline-width) solid var(--color-outline-dark);
+    }
+  }
+}

@@ -7,8 +7,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title translate="no">LetrBoxd</title>
+  <link rel="stylesheet" href="site/styles/main.css"/>
   <link rel="icon" type="image/svg+xml" href="site/svg/favicon.svg">
 </head>
 <body>
+  <div class="left-panel grid">
+    <h1 translate="no">LetrBoxd</h1>
+
+    <div id="description-card" class="card" role="region" tabindex="0" aria-labelledby="description-label" aria-describedby="description-text">
+      <label id="description-label" class="card-label" aria-hidden="true">
+        Description:
+      </label>
+      <p id="description-text">
+        A solver for the <a href="https://www.nytimes.com/puzzles/letter-boxed" translate="no">Letter Boxed</a>
+        puzzle game that finds solutions without repeated letters.
+      </p>
+    </div>
+
+    <letrboxd-input id="input-board" value=""></letrboxd-input>
+
+    <div id="word-list-card" class="card" role="region" tabindex="0" aria-labelledby="word-list-card-label" aria-describedby="word-list-card-text">
+      <label id="word-list-card-label" class="card-label" aria-hidden="true">
+        Note:
+      </label>
+      <p id="word-list-card-text">
+        The <b>LetrBoxd</b> solver uses the open-source <a href="https://github.com/wordnik/wordlist">Wordnik word list</a>,
+        which may produce solutions that are not accepted by the official Letter Boxed game.
+      </p>
+    </div>
+
+    <div id="instructions-card" class="card" role="region" tabindex="0" aria-labelledby="instructions-label" aria-describedby="instructions-text">
+      <label id="instructions-label" class="card-label" aria-hidden="true">
+        Instructions:
+      </label>
+      <p id="instructions-text">
+        Use the mouse or arrow keys to navigate within the puzzle input.
+        Update the puzzle input by focusing a letter and replacing it.
+        Expand the solution lists to view solutions.
+      </p>
+    </div>
+  </div>
+
+  <div class="right-panel" tabindex="0" role="region" aria-labelledby="solutions-header">
+    <h1 id="solutions-header">Solutions: 0</h1>
+    <div id="output">
+      <!-- 5 solution lists with word-count from 1 to 5 -->
+      <solution-list word-count="1"></solution-list>
+      <solution-list word-count="2"></solution-list>
+      <solution-list word-count="3"></solution-list>
+      <solution-list word-count="4"></solution-list>
+      <solution-list word-count="5"></solution-list>
+    </div>
+
+    <div id="no-solutions-card" class="card" role="region" tabindex="0" aria-labelledby="no-solutions-card-label" aria-describedby="no-solutions-card-text">
+      <label id="no-solutions-card-label" class="card-label" aria-hidden="true">
+        Note:
+      </label>
+      <p id="no-solutions-card-text">
+        No solutions were found for this puzzle input.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="./site/custom-elements/solution-list.mjs"></script>
+  <script type="module" src="./site/custom-elements/letrboxd-input.mjs"></script>
+  <script src="./site/main.js" type="module"></script>
 </body>
 </html>

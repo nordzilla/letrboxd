@@ -1,0 +1,15 @@
+[package]
+name = "letrboxd-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "letrboxd"
+crate-type = ["cdylib"]
+
+[dependencies]
+letters = { path = "../letters", features = ["wasm"] }
+word-list = { path = "../word-list" }
+bincode = "1.3.3"
+serde = { version = "1.0.210", features = ["derive"] }
+wasm-bindgen = { version = "0.2.95" }

@@ -4,6 +4,7 @@ members = [
   "letrboxd-analysis",
   "letrboxd-benchmarks",
   "letrboxd-cli",
+  "letrboxd-wasm",
   "letters",
   "word-list",
 ]

@@ -1,0 +1,11 @@
+[package]
+name = "word-list"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+letters = { path = "../letters" }
+crc32fast = "1.4.2"
+
+[dependencies]
+letters = { path = "../letters" }

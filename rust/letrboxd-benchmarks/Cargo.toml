@@ -1,0 +1,15 @@
+[package]
+name = "letrboxd-benchmarks"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+letters = { path = "../letters" }
+word-list = { path = "../word-list" }
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "count_solutions"
+harness = false

@@ -7,6 +7,12 @@ use crate::Solution;
 use std::fmt::{Debug, Display};
 use std::ops::RangeBounds;
 
+#[cfg(feature = "wasm")]
+use serde::{Deserialize, Serialize};
+
+#[cfg(feature = "wasm")]
+use wasm_bindgen::prelude::*;
+
 /// [`LetterSequence`] is a stack-allocated vector of up to 12 uppercase [ASCII] letters represented internally by
 /// a single [u64] value.
 ///
@@ -78,6 +84,8 @@ use std::ops::RangeBounds;
 ///
 /// [ASCII]: https://en.wikipedia.org/wiki/ASCII
 #[derive(Clone, Copy, PartialOrd, Ord)]
+#[cfg_attr(feature = "wasm", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 // The single use of unsafe in this code is a function that creates a string from raw
 // bytes and does not violate any constructor invariants for [`LetterSequence`] itself.
 // https://rust-lang.github.io/rust-clippy/master/index.html#unsafe_derive_deserialize

@@ -6,6 +6,9 @@ use crate::LetterSequence;
 
 use std::{fmt::Debug, ops::Range};
 
+#[cfg(feature = "wasm")]
+use serde::{Deserialize, Serialize};
+
 /// Encodes word boundaries for a [`LetterSequence`] as individual bits in a single [`u16`].
 ///
 /// Each set bit in the [`Solution`] indicates a word boundary at the letter for that index.
@@ -22,6 +25,7 @@ use std::{fmt::Debug, ops::Range};
 /// 001001010001 -> IMP PART TED DUNKS
 /// ```
 #[derive(Copy, Clone)]
+#[cfg_attr(feature = "wasm", derive(Serialize, Deserialize))]
 pub struct Solution(u16);
 
 /// Debug prints a 16-bit binary representation of the underlying boundary bits.

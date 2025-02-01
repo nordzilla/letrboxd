@@ -6,6 +6,9 @@ use std::fmt::Display;
 use crate::compress_letter;
 use crate::LetterSequence;
 
+#[cfg(feature = "wasm")]
+use serde::{Deserialize, Serialize};
+
 /// [`LetterSet`] is a compact bitset representing uppercase ASCII letters
 /// using a single [u32]. Each of the 26 letters corresponds to a value in
 /// the bit set with 6 bits of unused space left over.
@@ -34,6 +37,7 @@ use crate::LetterSequence;
 /// assert!(set_with_e.has(compress(b'E')));
 /// ```
 #[derive(Clone, Copy, Default, PartialOrd, Ord)]
+#[cfg_attr(feature = "wasm", derive(Serialize, Deserialize))]
 pub struct LetterSet(u32);
 
 impl Debug for LetterSet {

@@ -1,0 +1,42 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.11.1'
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          components: clippy
+          targets: wasm32-unknown-unknown
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run linters 
+        run: bash scripts/lint.sh
+
+      - name: Run tests
+        run: bash scripts/test.sh
+
+      - name: Run build-cli.sh
+        run: bash scripts/build-cli.sh
+
+      - name: Run build-wasm.sh
+        run: bash scripts/build-wasm.sh

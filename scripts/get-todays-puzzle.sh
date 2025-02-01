@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Navigate to the root directory of the project
 cd "$(dirname $0)/../rust"
